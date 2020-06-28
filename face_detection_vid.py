@@ -9,6 +9,7 @@ cap = cv2.VideoCapture("corres_filename.mp4")
 
 while True:
     # Read the frame
+    # Here the first parameter is not mandatory and so it is scripted underscore which means nothing.
     _, img = cap.read()
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -29,5 +30,5 @@ while True:
     if(cv2.waitKey(1) & 0xff) == 27:
         break
         
-
+#As it is a video, the frames being recorded needs to be released
 cap.release()
